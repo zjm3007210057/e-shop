@@ -10,9 +10,10 @@ logs/
 tmp/
 bak/
 *.swp
-web-app/WEB-INF
+#web-app/WEB-INF
 .DS_Store
-apollo-env.properties
+#apollo-env.properties
 application.properties
 *.txt
 *.yml
+Thumbs.db
