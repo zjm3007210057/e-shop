@@ -1,75 +1,75 @@
 package com.e.shop.common.dal.persistant;
 
-import java.util.Date;
+/**
+ * 购物车数据模型
+ * Created by zjm on 19/11/2017.
+ */
+public class Cart extends BaseEntity {
 
-public class Cart {
-    private Integer id;
+    /**
+     * 主键id
+     */
+    private int id;
 
-    private Integer userId;
+    /**
+     * 用户id
+     */
+    private int userId;
 
-    private Integer productId;
+    /**
+     * 商品id
+     */
+    private int productId;
 
-    private Integer quantity;
+    /**
+     * 商品数量
+     */
+    private short quantity;
 
-    private Integer checked;
+    /**
+     * 商品是否勾选，1=已勾选,0=未勾选，默认为0
+     */
+    private byte checked;
 
-    private Date createTime;
+    //get and set methods
 
-    private Date updateTime;
-
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Integer getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
-    public Integer getProductId() {
+    public int getProductId() {
         return productId;
     }
 
-    public void setProductId(Integer productId) {
+    public void setProductId(int productId) {
         this.productId = productId;
     }
 
-    public Integer getQuantity() {
+    public short getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(short quantity) {
         this.quantity = quantity;
     }
 
-    public Integer getChecked() {
+    public byte getChecked() {
         return checked;
     }
 
-    public void setChecked(Integer checked) {
+    public void setChecked(byte checked) {
         this.checked = checked;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
     }
 }

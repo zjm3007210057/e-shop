@@ -1,35 +1,51 @@
 package com.e.shop.common.dal.persistant;
 
-import java.util.Date;
+/**
+ * 商品类别数据模型
+ * Created by zjm on 19/11/2017.
+ */
+public class Category extends BaseEntity {
 
-public class Category {
-    private Integer id;
+    /**
+     * 主键id
+     */
+    private int id;
 
-    private Integer parentId;
+    /**
+     * 父类别id，当id为0时表示为根节点，一级类别
+     */
+    private int parentId;
 
+    /**
+     * 类别名称
+     */
     private String name;
 
-    private Boolean status;
+    /**
+     * 类别状态，1表示正常，2表示废弃
+     */
+    private byte status;
 
-    private Integer sortOrder;
+    /**
+     * 排序编号，同类展示顺序,数值相等则自然排序
+     */
+    private byte sortOrder;
 
-    private Date createTime;
+    //get and set methods
 
-    private Date updateTime;
-
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Integer getParentId() {
+    public int getParentId() {
         return parentId;
     }
 
-    public void setParentId(Integer parentId) {
+    public void setParentId(int parentId) {
         this.parentId = parentId;
     }
 
@@ -38,38 +54,22 @@ public class Category {
     }
 
     public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+        this.name = name;
     }
 
-    public Boolean getStatus() {
+    public byte getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(byte status) {
         this.status = status;
     }
 
-    public Integer getSortOrder() {
+    public byte getSortOrder() {
         return sortOrder;
     }
 
-    public void setSortOrder(Integer sortOrder) {
+    public void setSortOrder(byte sortOrder) {
         this.sortOrder = sortOrder;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
     }
 }

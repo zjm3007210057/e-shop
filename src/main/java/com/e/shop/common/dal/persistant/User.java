@@ -1,42 +1,47 @@
 package com.e.shop.common.dal.persistant;
 
-import java.util.Date;
+/**
+ * 用户数据模型
+ * Created by zjm on 19/11/2017.
+ */
+public class User extends BaseEntity {
 
-public class User {
-    private Integer id;
+    /**
+     * 主键id
+     */
+    private int id;
 
-    private String username;
+    /**
+     * 用户名，可以为空
+     */
+    private String name;
 
+    /**
+     * 用户密码，可以为空
+     */
     private String password;
 
-    private String email;
-
+    /**
+     * 手机号，可以用手机号和验证码登录
+     */
     private String phone;
 
-    private String question;
+    //get and set methods
 
-    private String answer;
-
-    private Integer role;
-
-    private Date createTime;
-
-    private Date updateTime;
-
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
@@ -44,15 +49,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
+        this.password = password;
     }
 
     public String getPhone() {
@@ -60,46 +57,6 @@ public class User {
     }
 
     public void setPhone(String phone) {
-        this.phone = phone == null ? null : phone.trim();
-    }
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question == null ? null : question.trim();
-    }
-
-    public String getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer == null ? null : answer.trim();
-    }
-
-    public Integer getRole() {
-        return role;
-    }
-
-    public void setRole(Integer role) {
-        this.role = role;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+        this.phone = phone;
     }
 }

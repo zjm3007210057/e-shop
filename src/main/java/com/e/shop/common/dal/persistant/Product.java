@@ -1,46 +1,76 @@
 package com.e.shop.common.dal.persistant;
 
-import java.math.BigDecimal;
-import java.util.Date;
+/**
+ * 商品数据模型
+ * Created by zjm on 19/11/2017.
+ */
+public class Product extends BaseEntity {
 
-public class Product {
-    private Integer id;
+    /**
+     * 主键id
+     */
+    private int id;
 
-    private Integer categoryId;
+    /**
+     * 分类id
+     */
+    private int categoryId;
 
+    /**
+     * 商品名称
+     */
     private String name;
 
-    private String subtitle;
+    /**
+     * 商品副标题
+     */
+    private String subTitle;
 
-    private String mainImage;
+    /**
+     * 商品主图url地址
+     */
+    private String mainImages;
 
+    /**
+     * 商品副图url地址
+     */
     private String subImages;
 
+    /**
+     * 商品详情
+     */
     private String detail;
 
-    private BigDecimal price;
+    /**
+     * 商品单价
+     */
+    private float price;
 
-    private Integer stock;
+    /**
+     * 商品库存
+     */
+    private short stock;
 
-    private Integer status;
+    /**
+     * 商品状态，1表示在售，2表示下架，3表示无货
+     */
+    private byte status;
 
-    private Date createTime;
+    //get and set methods
 
-    private Date updateTime;
-
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Integer getCategoryId() {
+    public int getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(Integer categoryId) {
+    public void setCategoryId(int categoryId) {
         this.categoryId = categoryId;
     }
 
@@ -49,23 +79,23 @@ public class Product {
     }
 
     public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+        this.name = name;
     }
 
-    public String getSubtitle() {
-        return subtitle;
+    public String getSubTitle() {
+        return subTitle;
     }
 
-    public void setSubtitle(String subtitle) {
-        this.subtitle = subtitle == null ? null : subtitle.trim();
+    public void setSubTitle(String subTitle) {
+        this.subTitle = subTitle;
     }
 
-    public String getMainImage() {
-        return mainImage;
+    public String getMainImages() {
+        return mainImages;
     }
 
-    public void setMainImage(String mainImage) {
-        this.mainImage = mainImage == null ? null : mainImage.trim();
+    public void setMainImages(String mainImages) {
+        this.mainImages = mainImages;
     }
 
     public String getSubImages() {
@@ -73,7 +103,7 @@ public class Product {
     }
 
     public void setSubImages(String subImages) {
-        this.subImages = subImages == null ? null : subImages.trim();
+        this.subImages = subImages;
     }
 
     public String getDetail() {
@@ -81,46 +111,30 @@ public class Product {
     }
 
     public void setDetail(String detail) {
-        this.detail = detail == null ? null : detail.trim();
+        this.detail = detail;
     }
 
-    public BigDecimal getPrice() {
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
-    public Integer getStock() {
+    public short getStock() {
         return stock;
     }
 
-    public void setStock(Integer stock) {
+    public void setStock(short stock) {
         this.stock = stock;
     }
 
-    public Integer getStatus() {
+    public byte getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(byte status) {
         this.status = status;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
     }
 }

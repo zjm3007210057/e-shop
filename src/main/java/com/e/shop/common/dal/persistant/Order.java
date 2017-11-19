@@ -1,107 +1,132 @@
 package com.e.shop.common.dal.persistant;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
-public class Order {
-    private Integer id;
+/**
+ * 订单数据模型
+ * Created by zjm on 19/11/2017.
+ */
+public class Order extends BaseEntity {
 
-    private Long orderNo;
+    /**
+     * 主键id
+     */
+    private int id;
 
-    private Integer userId;
+    /**
+     * 用户id
+     */
+    private int userId;
 
-    private Integer shippingId;
+    /**
+     * 订单号
+     */
+    private long orderNo;
 
-    private BigDecimal payment;
+    /**
+     * 实际付款金额
+     */
+    private float payment;
 
-    private Integer paymentType;
+    /**
+     * 付款类型
+     */
+    private byte paymentType;
 
-    private Integer postage;
+    /**
+     * 邮费
+     */
+    private byte postage;
 
-    private Integer status;
+    /**
+     * 订单状态，0表示已付款，1表示未付款，2表示已取消，3表示已发货，4表示交易成功，5表示交易关闭
+     */
+    private byte status;
 
-    private Date paymentTime;
+    /**
+     * 付款时间
+     */
+    private Date payTime;
 
+    /**
+     * 发货时间
+     */
     private Date sendTime;
 
-    private Date endTime;
-
+    /**
+     * 订单关闭时间
+     */
     private Date closeTime;
 
-    private Date createTime;
+    /**
+     * 订单完成时间
+     */
+    private Date endTime;
 
-    private Date updateTime;
+    //get and set methods
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Long getOrderNo() {
-        return orderNo;
-    }
-
-    public void setOrderNo(Long orderNo) {
-        this.orderNo = orderNo;
-    }
-
-    public Integer getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
-    public Integer getShippingId() {
-        return shippingId;
+    public long getOrderNo() {
+        return orderNo;
     }
 
-    public void setShippingId(Integer shippingId) {
-        this.shippingId = shippingId;
+    public void setOrderNo(long orderNo) {
+        this.orderNo = orderNo;
     }
 
-    public BigDecimal getPayment() {
+    public float getPayment() {
         return payment;
     }
 
-    public void setPayment(BigDecimal payment) {
+    public void setPayment(float payment) {
         this.payment = payment;
     }
 
-    public Integer getPaymentType() {
+    public byte getPaymentType() {
         return paymentType;
     }
 
-    public void setPaymentType(Integer paymentType) {
+    public void setPaymentType(byte paymentType) {
         this.paymentType = paymentType;
     }
 
-    public Integer getPostage() {
+    public byte getPostage() {
         return postage;
     }
 
-    public void setPostage(Integer postage) {
+    public void setPostage(byte postage) {
         this.postage = postage;
     }
 
-    public Integer getStatus() {
+    public byte getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(byte status) {
         this.status = status;
     }
 
-    public Date getPaymentTime() {
-        return paymentTime;
+    public Date getPayTime() {
+        return payTime;
     }
 
-    public void setPaymentTime(Date paymentTime) {
-        this.paymentTime = paymentTime;
+    public void setPayTime(Date payTime) {
+        this.payTime = payTime;
     }
 
     public Date getSendTime() {
@@ -112,14 +137,6 @@ public class Order {
         this.sendTime = sendTime;
     }
 
-    public Date getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(Date endTime) {
-        this.endTime = endTime;
-    }
-
     public Date getCloseTime() {
         return closeTime;
     }
@@ -128,19 +145,11 @@ public class Order {
         this.closeTime = closeTime;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getEndTime() {
+        return endTime;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
     }
 }
