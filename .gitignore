@@ -15,5 +15,5 @@ bak/
 #apollo-env.properties
 application.properties
 *.txt
-*.yml
+#*.yml
 Thumbs.db
