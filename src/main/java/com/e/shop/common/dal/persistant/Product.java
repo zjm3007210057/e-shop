@@ -54,7 +54,7 @@ public class Product extends BaseEntity {
     /**
      * 商品状态，1表示在售，2表示下架，3表示无货
      */
-    private byte status;
+    private int status;
 
     //get and set methods
 
@@ -130,11 +130,11 @@ public class Product extends BaseEntity {
         this.stock = stock;
     }
 
-    public byte getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(byte status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 }

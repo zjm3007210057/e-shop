@@ -29,7 +29,7 @@ public class Cart extends BaseEntity {
     /**
      * 商品是否勾选，1=已勾选,0=未勾选，默认为0
      */
-    private byte checked;
+    private int checked;
 
     //get and set methods
 
@@ -65,11 +65,11 @@ public class Cart extends BaseEntity {
         this.quantity = quantity;
     }
 
-    public byte getChecked() {
+    public int getChecked() {
         return checked;
     }
 
-    public void setChecked(byte checked) {
+    public void setChecked(int checked) {
         this.checked = checked;
     }
 }

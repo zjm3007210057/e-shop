@@ -24,12 +24,12 @@ public class Category extends BaseEntity {
     /**
      * 类别状态，1表示正常，2表示废弃
      */
-    private byte status;
+    private int status;
 
     /**
      * 排序编号，同类展示顺序,数值相等则自然排序
      */
-    private byte sortOrder;
+    private int sortOrder;
 
     //get and set methods
 
@@ -57,19 +57,19 @@ public class Category extends BaseEntity {
         this.name = name;
     }
 
-    public byte getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(byte status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
-    public byte getSortOrder() {
+    public int getSortOrder() {
         return sortOrder;
     }
 
-    public void setSortOrder(byte sortOrder) {
+    public void setSortOrder(int sortOrder) {
         this.sortOrder = sortOrder;
     }
 }

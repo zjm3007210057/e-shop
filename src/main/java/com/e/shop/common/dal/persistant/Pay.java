@@ -29,12 +29,12 @@ public class Pay extends BaseEntity {
     /**
      * 支付状态，0表示成功，1表示失败，2表示正在支付，3表示未支付
      */
-    private byte status;
+    private int status;
 
     /**
      * 支付平台，0表示支付宝；1表示微信
      */
-    private byte payPlatform;
+    private int payPlatform;
 
     //get and set methods
 
@@ -70,19 +70,19 @@ public class Pay extends BaseEntity {
         this.payNo = payNo;
     }
 
-    public byte getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(byte status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
-    public byte getPayPlatform() {
+    public int getPayPlatform() {
         return payPlatform;
     }
 
-    public void setPayPlatform(byte payPlatform) {
+    public void setPayPlatform(int payPlatform) {
         this.payPlatform = payPlatform;
     }
 }

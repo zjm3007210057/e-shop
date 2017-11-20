@@ -31,17 +31,17 @@ public class Order extends BaseEntity {
     /**
      * 付款类型
      */
-    private byte paymentType;
+    private int paymentType;
 
     /**
      * 邮费
      */
-    private byte postage;
+    private int postage;
 
     /**
      * 订单状态，0表示已付款，1表示未付款，2表示已取消，3表示已发货，4表示交易成功，5表示交易关闭
      */
-    private byte status;
+    private int status;
 
     /**
      * 付款时间
@@ -97,27 +97,27 @@ public class Order extends BaseEntity {
         this.payment = payment;
     }
 
-    public byte getPaymentType() {
+    public int getPaymentType() {
         return paymentType;
     }
 
-    public void setPaymentType(byte paymentType) {
+    public void setPaymentType(int paymentType) {
         this.paymentType = paymentType;
     }
 
-    public byte getPostage() {
+    public int getPostage() {
         return postage;
     }
 
-    public void setPostage(byte postage) {
+    public void setPostage(int postage) {
         this.postage = postage;
     }
 
-    public byte getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(byte status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
